@@ -4,7 +4,6 @@ Caden Blaser
 2025-10-09
 
 - [ABSTRACT](#abstract)
-- [BACKGROUND](#background)
 - [STUDY QUESTION and HYPOTHESIS](#study-question-and-hypothesis)
   - [Questions](#questions)
   - [Hypothesis](#hypothesis)
@@ -38,9 +37,7 @@ transmission in this region.
 
 Fill in abstract… Write this last, after finishing methods, results, and
 discussion. Summarize the overall study question, approach, results, and
-conclusion in a short paragraph.
-
-# BACKGROUND
+conclusion in a short paragraph. in class \# BACKGROUND
 
 West Nile virus (WNV) is a mosquito-borne virus that is primarily
 transmitted by Culex mosquitoes, with birds being the primary hosts.
