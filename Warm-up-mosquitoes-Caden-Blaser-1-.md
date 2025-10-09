@@ -23,20 +23,33 @@ Caden Blaser
 
 # ABSTRACT
 
+This report investigates which bird species in Salt Lake serves as the
+primary amplifying host for West Nile Virus (WNV). Mosquito blood meals
+were analyzed in able to determine the host species, and WNV infection
+were collected from mosquito pools. Feeding patterns were compared
+between all the sites with and without WNV-positive pools using barplots
+shown below, and generalized linear models tested whether certain hosts
+predicted WNV presence and positivity rates. Both analyses showed that
+sites with more House Finch blood meals had a much higher WNV activity.
+These results indicate that House Finches are frequently fed upon by
+mosquitoes and they act as key amplifying hosts. Overall, the study
+highlights the important role of House Finches in sustaining WNV
+transmission in this region.
+
 Fill in abstract… Write this last, after finishing methods, results, and
 discussion. Summarize the overall study question, approach, results, and
 conclusion in a short paragraph.
 
 # BACKGROUND
 
-my changee West Nile virus (WNV) is a mosquito-borne virus that is
-primarily transmitted by Culex mosquitoes, with birds being the primary
-hosts. Understanding which species mosquitoes feed on is crucial because
-host choice directly influences virus transmission. Certain birds, such
-as house finches, can also develop high levels of viremia. This means
-that when mosquitoes feed on these birds, they can easily acquire the
-virus and later transmit it to other hosts, playing an important role in
-the spread of WNV (Komar et al., 2003).
+West Nile virus (WNV) is a mosquito-borne virus that is primarily
+transmitted by Culex mosquitoes, with birds being the primary hosts.
+Understanding which species mosquitoes feed on is crucial because host
+choice directly influences virus transmission. Certain birds, such as
+house finches, can also develop high levels of viremia. This means that
+when mosquitoes feed on these birds, they can easily acquire the virus
+and later transmit it to other hosts, playing an important role in the
+spread of WNV (Komar et al., 2003).
 
 Modern technologies now allow for a much better identification of
 mosquito blood meals. In these methods, DNA is first extracted from
