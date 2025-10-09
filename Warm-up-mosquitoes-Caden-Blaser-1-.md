@@ -29,7 +29,7 @@ conclusion in a short paragraph.
 
 # BACKGROUND
 
-my change West Nile virus (WNV) is a mosquito-borne virus that is
+my changee West Nile virus (WNV) is a mosquito-borne virus that is
 primarily transmitted by Culex mosquitoes, with birds being the primary
 hosts. Understanding which species mosquitoes feed on is crucial because
 host choice directly influences virus transmission. Certain birds, such
