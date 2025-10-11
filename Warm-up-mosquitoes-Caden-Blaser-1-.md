@@ -1,17 +1,18 @@
 Warm-up mini-Report: Mosquito Blood Hosts in Salt Lake City, Utah
 ================
 Caden Blaser
-2025-10-09
+2025-10-11
 
 - [ABSTRACT](#abstract)
+- [BACKGROUND](#background)
 - [STUDY QUESTION and HYPOTHESIS](#study-question-and-hypothesis)
   - [Questions](#questions)
   - [Hypothesis](#hypothesis)
   - [Prediction](#prediction)
-  - [Fill in 1st analysis
-    e.g. barplots](#fill-in-1st-analysis-eg-barplots)
-  - [Fill in 2nd analysis/plot e.g. generalized linear
-    model](#fill-in-2nd-analysisplot-eg-generalized-linear-model)
+  - [Methods](#methods)
+  - [1st analysis of barplots](#1st-analysis-of-barplots)
+  - [2nd analysis of generalized linear
+    model](#2nd-analysis-of-generalized-linear-model)
 - [DISCUSSION](#discussion)
   - [Interpretation of 1st analysis
     (e.g. barplots)](#interpretation-of-1st-analysis-eg-barplots)
@@ -22,28 +23,26 @@ Caden Blaser
 
 # ABSTRACT
 
-This report investigates which bird species in Salt Lake serves as the
-primary amplifying host for West Nile Virus (WNV). Mosquito blood meals
-were analyzed in able to determine the host species, and WNV infection
-were collected from mosquito pools. Feeding patterns were compared
-between all the sites with and without WNV-positive pools using barplots
-shown below, and generalized linear models tested whether certain hosts
-predicted WNV presence and positivity rates. Both analyses showed that
-sites with more House Finch blood meals had a much higher WNV activity.
-These results indicate that House Finches are frequently fed upon by
-mosquitoes and they act as key amplifying hosts. Overall, the study
-highlights the important role of House Finches in sustaining WNV
-transmission in this region.
+This report investigates which bird species in Salt Lake City serves as
+the primary amplifying host for West Nile Virus (WNV). Mosquito blood
+meals were analyzed to identify the host species, and data for WNV
+infection were obtained from mosquito pools surrounding the area.
+Feeding patterns were compared between all sites with and without
+WNV-positive pools using barplots shown below, and a generalized linear
+model was used to test whether certain hosts were associated with WNV
+activity. Both analyses showed that sites with more House Finch blood
+meals had a much higher WNV activity. These results indicate that House
+Finches are frequently fed upon by mosquitoes and they act as key
+amplifying hosts for WNV. Overall, the study highlights the important
+role of House Finches in sustaining WNV transmission in this region.
 
-Fill in abstract… Write this last, after finishing methods, results, and
-discussion. Summarize the overall study question, approach, results, and
-conclusion in a short paragraph. in class \# BACKGROUND
+# BACKGROUND
 
-West Nile virus (WNV) is a mosquito-borne virus that is primarily
+West Nile Virus (WNV) is a mosquito-borne virus that is primarily
 transmitted by Culex mosquitoes, with birds being the primary hosts.
 Understanding which species mosquitoes feed on is crucial because host
 choice directly influences virus transmission. Certain birds, such as
-house finches, can also develop high levels of viremia. This means that
+House Finches, can also develop high levels of viremia. This means that
 when mosquitoes feed on these birds, they can easily acquire the virus
 and later transmit it to other hosts, playing an important role in the
 spread of WNV (Komar et al., 2003).
@@ -106,20 +105,34 @@ host for West Nile Virus (WNV)?
 ## Hypothesis
 
 Bird species that are fed on more frequently by mosquitoes are more
-likely to act as important amplifying hosts of WNV.
+likely to act as important amplifying hosts for WNV.
 
 ## Prediction
 
-If a species turns out to be an effective amplifying host, then the
-individuals of that species will show a higher viremia compared to other
-species, leading to mosquitoes biting them more often. \# METHODS
+If certain bird species act as important amplifying hosts, then sites
+where mosquitoes feed more frequently on those species will have higher
+rates of confirmed WNV in mosquito pools.
 
-Fill in here… Summarize the procedures and analyses you use in this
-report. In this section, describe what you did and why. Don’t just
-restate the code — explain the logic of each analysis in plain language.
-Keep each subsection short (2–4 sentences).
+## Methods
 
-## Fill in 1st analysis e.g. barplots
+Blood meals from mosquitoes were analyzed to find the host species. DNA
+was then extracted from each blood meal, amplified using PCR, then
+sequenced. This allowed us to determine what species of bird the
+mosquitoes fed on at different sites.
+
+We then visualized the number of blood meals from each host species at
+sites that did and didn’t have WNV-positive mosquito pools by using
+horizontal barplots. The comparison between the two helped us see
+whether the mosquitoes fed more frequently on certain species in the
+areas where WNV was positive.
+
+Next, we then used a generalized linear model to test whether feeding on
+certain bird species was associated with WNV presence or positivity
+rates. This statistical test showed the relationship between the
+mosquito feeding patterns and WNV activity in the area, giving us
+evidence beyond the visual trends from the barplots.
+
+## 1st analysis of barplots
 
 We compared the number of mosquito blood meals from each of the host
 species between sites that had no WNV-positive pools and sites that had
@@ -225,14 +238,14 @@ par(op)
 host_species_colors <- species_colors
 ```
 
-## Fill in 2nd analysis/plot e.g. generalized linear model
+## 2nd analysis of generalized linear model
 
 For the 2nd analysis we investigated whether sites with House Finch
 blood meals are likely to have WNV-positive pools or WNV positivity
 rates. Using a generalized linear model, we were able to formally test
 the patterns that were suggested above by the barplots, being able to
 assess whether the number or presence of the House Finch is associated
-with the WNV being in that area. This approach let us get passed the
+with the WNV being in that area. This approach lets us get past the
 visual patters and showed us the real strength and significance of the
 relationships.
 
@@ -296,7 +309,7 @@ summary(glm2)
 ## Interpretation of 1st analysis (e.g. barplots)
 
 The 1st analysis looked at the number of mosquito blood meals from each
-of the host species at certain cites with no WNV-positive pools and
+of the host species at certain sites with no WNV-positive pools and
 sites with one or more WNV-positive pools. The barplot showed that
 mosquitoes at the WNV-positive sites fed more on certain species than
 those without the WNV-positive pools. Both fed on other hosts similarly
@@ -318,14 +331,17 @@ increase in WNV activity.
 # CONCLUSION
 
 Overall, our analyses proposed that the House Finch blood meals are
-associated with an increase WNV activity in Salt Lake City. Both the
-genrealized linear model and the barplots showed that sites that housed
+associated with an increase in WNV activity in Salt Lake City. Both the
+generalized linear model and the barplots showed that sites that housed
 more House Finch meals were more likely to have WNV-positive pools while
 also having higher WNV positivity rates. These findings support our
 hypothesis that bird species that are fed on more frequently by
-mosquitoes are more likely to act as amplifying hosts on WNV. Together,
+mosquitoes are more likely to act as amplifying hosts of WNV. Together,
 the findings indicate that House Finches may play a very important role
-in amplifying and sustaining WNV transmission in Salt Lake City.
+in amplifying and sustaining WNV transmission in Salt Lake City. One
+limitation is that this study is based on observational data, so we
+aren’t completely certain that mosquito feeding directly causes higher
+WNV rates.
 
 # REFERENCES
 
@@ -335,4 +351,4 @@ in amplifying and sustaining WNV transmission in Salt Lake City.
     Dis. 2003 Mar;9(3):311-22. <https://doi.org/10.3201/eid0903.020628>
 
 2.  ChatGPT. OpenAI, version Jan 2025. Used as a reference for functions
-    such as plot() and to correct syntax errors. Accessed 2025-10-09.
+    such as plot() and to correct syntax errors. Accessed 2025-10-11.
