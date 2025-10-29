@@ -1,7 +1,7 @@
 ---
-title: "Untitled"
-author: "Your Name Here"
-date: "2025-??-??"
+title: "Final Rmarkdown report"
+author: "Caden Blaser"
+date: "2025-10-28"
 output:
   github_document:
     toc: true
