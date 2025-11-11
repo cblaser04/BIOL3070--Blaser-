@@ -19,7 +19,7 @@ Fireflies are bioliminescent beetles that are commonly observed in temperate and
 
 Geographic location plays a big role in determining the firefly abundance. The northern regions typically experience cooler temperatures and a higher amount of moisture, which promotes a higher larval suvival and an increase in the overall abundance. On the other hand, southern areas typically experience higher temperature and more drier conditions that lead to a reduction in firefly activity. 
 
-To be able to explore these kinds of patterns, our study asks: Does the abundance of fireflies vary between northern and southern regions in Utah. We hypothesize that northern populations will have a higher abundance than southern populations because of the cooler temperatures and an increase in moisture levels which promotes larval survival and overall firefly activity (Lewis, 2016). Based off of this hypothesis, we predicted that the northern regions of Utah will show a higher mean abundance of fireflies compared to the southern regions, which we will be able to visualize using a bar graph, violin plot, and a test statistic by using a t-test.
+To be able to explore these kinds of patterns, our study asks: Does the abundance of fireflies vary between northern and southern regions in Utah. We hypothesize that northern populations will have a higher abundance than southern populations because of the cooler temperatures and an increase in moisture levels which promotes larval survival and overall firefly activity (Lewis, 2016). Based off of this hypothesis, we predicted that the northern regions of Utah will show a higher mean abundance of fireflies compared to the southern regions, which we will be able to visualize using a bar graph, violin plot, and a test statistic by using a poisson test.
 
 # STUDY QUESTION and HYPOTHESIS
 
@@ -33,7 +33,7 @@ The geographic location of fireflies (Northern vs. Southern populations) will af
 If we find that geographic location affects firefly abundance, then northern populations will have a higher abundance of fireflies that southern populations.
 
 # METHODS
-Observational data was collected to estimate firefly counts in northern and southern regions of Utah. Each record included the number of fireflies observed and the corresponding geographic location. Our dataset was then polished by getting rid of incomplete recors, and observations that were grouped by region for analysis. To be able to visualize the difference, a bar graph was used to show the mean abundance with standard deviation, and a violin plot was used to show the distribution of counts in each region. Then a two-sample t-test was conducted to determine if the mean firefly abundance differed between northern and southern populations, with an alpha level of 0.05. 
+Observational data was collected to estimate firefly counts in northern and southern regions of Utah. Each record included the number of fireflies observed and the corresponding geographic location. Our dataset was then polished by getting rid of incomplete recors, and observations that were grouped by region for analysis. To be able to visualize the difference, a bar graph was used to show the mean abundance with standard deviation, and a violin plot was used to show the distribution of counts in each region. Then a poisson test was conducted to determine if the mean firefly abundance differed between northern and southern populations, with a significant p-value of 0.003.
 
 # Plot 1
 ```{r}
@@ -148,23 +148,7 @@ summary(quasi_model)
 # Add predicted counts to the data
 fireflies$predicted_count <- predict(poisson_model, newdata = fireflies, type = "response")
 ```
-t-test
-```{r}
-# Read the dataset
-fireflies <- read.csv("Copy of firefliesUtah - Usable Data.csv")
 
-# Clean up column names
-colnames(fireflies) <- c("FireflyCount", "Region")
-
-# Make sure Region is a factor
-fireflies$Region <- factor(fireflies$Region, levels = c("north", "south"))
-
-# Run two-sample t-test
-t_test_result <- t.test(FireflyCount ~ Region, data = fireflies)
-
-# View the results
-t_test_result
-```
 
 # DISCUSSION
 

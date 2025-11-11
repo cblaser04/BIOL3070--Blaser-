@@ -49,7 +49,7 @@ overall firefly activity (Lewis, 2016). Based off of this hypothesis, we
 predicted that the northern regions of Utah will show a higher mean
 abundance of fireflies compared to the southern regions, which we will
 be able to visualize using a bar graph, violin plot, and a test
-statistic by using a t-test.
+statistic by using a poisson test.
 
 # STUDY QUESTION and HYPOTHESIS
 
@@ -79,9 +79,9 @@ dataset was then polished by getting rid of incomplete recors, and
 observations that were grouped by region for analysis. To be able to
 visualize the difference, a bar graph was used to show the mean
 abundance with standard deviation, and a violin plot was used to show
-the distribution of counts in each region. Then a two-sample t-test was
+the distribution of counts in each region. Then a poisson test was
 conducted to determine if the mean firefly abundance differed between
-northern and southern populations, with an alpha level of 0.05.
+northern and southern populations, with a significant p-value of 0.003.
 
 # Plot 1
 
@@ -260,37 +260,6 @@ summary(quasi_model)
 # Add predicted counts to the data
 fireflies$predicted_count <- predict(poisson_model, newdata = fireflies, type = "response")
 ```
-
-t-test
-
-``` r
-# Read the dataset
-fireflies <- read.csv("Copy of firefliesUtah - Usable Data.csv")
-
-# Clean up column names
-colnames(fireflies) <- c("FireflyCount", "Region")
-
-# Make sure Region is a factor
-fireflies$Region <- factor(fireflies$Region, levels = c("north", "south"))
-
-# Run two-sample t-test
-t_test_result <- t.test(FireflyCount ~ Region, data = fireflies)
-
-# View the results
-t_test_result
-```
-
-    ## 
-    ##  Welch Two Sample t-test
-    ## 
-    ## data:  FireflyCount by Region
-    ## t = -1.2716, df = 61.533, p-value = 0.2083
-    ## alternative hypothesis: true difference in means between group north and group south is not equal to 0
-    ## 95 percent confidence interval:
-    ##  -75.33068  16.75983
-    ## sample estimates:
-    ## mean in group north mean in group south 
-    ##            13.81293            43.09836
 
 # DISCUSSION
 
