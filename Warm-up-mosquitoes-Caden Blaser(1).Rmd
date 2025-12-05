@@ -20,6 +20,26 @@ West Nile Virus (WNV) is a mosquito-borne virus that is primarily transmitted by
 
 Modern technologies now allow for a much better identification of mosquito blood meals. In these methods, DNA is first extracted from mosquitoes, then amplified using PCR techniques that target vertebrate-specific markers. The amplified DNA is then sequenced to determine the host species. This approach provides a precise way to identify what animals mosquitoes are feeding on. By quantifying feeding patterns across different locations, researchers can better understand how mosquito behavior links to WNV transmission, helping to identify high-risk areas and species that are important for the virus cycle.
 
+
+# STUDY QUESTION and HYPOTHESIS
+
+## Questions  
+Which bird species in Salt Lake City serves as the primary amplifying host for West Nile Virus (WNV)?
+
+## Hypothesis 
+Bird species that are fed on more frequently by mosquitoes are more likely to act as important amplifying hosts for WNV.
+  
+## Prediction
+If certain bird species act as important amplifying hosts, then sites where mosquitoes feed more frequently on those species will have higher rates of confirmed WNV in mosquito pools.
+
+## Methods
+
+Blood meals from mosquitoes were analyzed to find the host species. DNA was then extracted from each blood meal, amplified using PCR, then sequenced. This allowed us to determine what species of bird the mosquitoes fed on at different sites. 
+
+We then visualized the number of blood meals from each host species at sites that did and didn't have WNV-positive mosquito pools by using horizontal barplots. The comparison between the two helped us see whether the mosquitoes fed more frequently on certain species in the areas where WNV was positive. 
+
+Next, we then used a generalized linear model to test whether feeding on certain bird species was associated with WNV presence or positivity rates. This statistical test showed the relationship between the mosquito feeding patterns and WNV activity in the area, giving us evidence beyond the visual trends from the barplots. 
+
 ```{r viremia, include=TRUE, eval=TRUE, warning=FALSE, fig.align='left', fig.width=4.75, fig.height=7}
 # Manually transcribe duration (mean, lo, hi) from the last table column
 duration <- data.frame(
@@ -55,25 +75,6 @@ bp <- barplot(duration$mean, horiz=TRUE, names.arg=duration$Bird,
 arrows(duration$lo, bp, duration$hi, bp,
        angle=90, code=3, length=0.05, col="black", xpd=TRUE)
 ```
-
-# STUDY QUESTION and HYPOTHESIS
-
-## Questions  
-Which bird species in Salt Lake City serves as the primary amplifying host for West Nile Virus (WNV)?
-
-## Hypothesis 
-Bird species that are fed on more frequently by mosquitoes are more likely to act as important amplifying hosts for WNV.
-  
-## Prediction
-If certain bird species act as important amplifying hosts, then sites where mosquitoes feed more frequently on those species will have higher rates of confirmed WNV in mosquito pools.
-
-## Methods
-
-Blood meals from mosquitoes were analyzed to find the host species. DNA was then extracted from each blood meal, amplified using PCR, then sequenced. This allowed us to determine what species of bird the mosquitoes fed on at different sites. 
-
-We then visualized the number of blood meals from each host species at sites that did and didn't have WNV-positive mosquito pools by using horizontal barplots. The comparison between the two helped us see whether the mosquitoes fed more frequently on certain species in the areas where WNV was positive. 
-
-Next, we then used a generalized linear model to test whether feeding on certain bird species was associated with WNV presence or positivity rates. This statistical test showed the relationship between the mosquito feeding patterns and WNV activity in the area, giving us evidence beyond the visual trends from the barplots. 
 
 ## 1st analysis of barplots
 
